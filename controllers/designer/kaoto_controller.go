@@ -82,6 +82,10 @@ func NewKaotoReconciler(manager ctrl.Manager) (*KaotoReconciler, error) {
 
 	rec.actions = append(rec.actions, &deployAction{})
 
+	rec.actions = append(rec.actions, &catalogAction{})
+
+	rec.actions = append(rec.actions, &deployAction{})
+
 	return &rec, nil
 }
 

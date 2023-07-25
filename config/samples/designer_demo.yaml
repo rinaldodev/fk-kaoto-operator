@@ -1,11 +1,7 @@
 apiVersion: designer.kaoto.io/v1alpha1
 kind: Kaoto
 metadata:
-  labels:
-    app.kubernetes.io/name: kaoto
-    app.kubernetes.io/instance: kaoto-sample
-    app.kubernetes.io/part-of: kaoto-operator
-    app.kubernetes.io/managed-by: kustomize
-    app.kubernetes.io/created-by: kaoto-operator
   name: kaoto-demo
-spec: {}
+spec:
+  catalogRepo: "localhost:5000/connectors"
+  catalogReference: "sha256:f2806042351410c9c6bda103de9d2744628c8c6622a646deed756f3b2fea8f6f"

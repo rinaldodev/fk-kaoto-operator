@@ -27,6 +27,10 @@ type KaotoSpec struct {
 
 	// +optional
 	Ingress *IngressSpec `json:"ingress,omitempty"`
+
+	CatalogRepo string `json:"catalogRepo"`
+
+	CatalogReference string `json:"catalogReference"`
 }
 
 type IngressSpec struct {

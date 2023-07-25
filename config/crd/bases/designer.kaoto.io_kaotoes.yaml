@@ -44,6 +44,10 @@ spec:
           spec:
             description: KaotoSpec defines the desired state of Kaoto.
             properties:
+              catalogReference:
+                type: string
+              catalogRepo:
+                type: string
               image:
                 type: string
               ingress:
@@ -53,6 +57,9 @@ spec:
                   path:
                     type: string
                 type: object
+            required:
+            - catalogReference
+            - catalogRepo
             type: object
           status:
             description: KaotoStatus defines the observed state of Kaoto.
